@@ -65,7 +65,11 @@ const login = async (req, res)=>{
 }
 
 const logout = async(req,res)=>{
-    res.clearCookie("jwt");
+    res.clearCookie("jwt",{
+    httpOnly: true,
+    secure: true,       // must match how it was set
+    sameSite: "none",
+  });
     res.json({ message:"Logged out"})
 }
 
