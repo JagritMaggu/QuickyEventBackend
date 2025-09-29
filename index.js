@@ -13,7 +13,7 @@ const userRoutes =require("./Routes/UserRoute.js")
 server.listen(port,()=>console.log(`server is running at port:${port}`))
 
 app.use(cors({
-    origin:"https://quicky-event-tracker-dwyo.vercel.app/",
+    origin:"https://quicky-event-tracker-dwyo.vercel.app",
     credentials:true,
 }));
 app.use(express.json())
