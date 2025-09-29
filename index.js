@@ -13,7 +13,7 @@ const userRoutes =require("./Routes/UserRoute.js")
 server.listen(port,()=>console.log(`server is running at port:${port}`))
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://your-frontend.vercel.app"
+  "https://quicky-event-tracker-dwyo.vercel.app"
 ];
 app.use(cors({
     origin: allowedOrigins,
