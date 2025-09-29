@@ -51,7 +51,7 @@ const login = async (req, res)=>{
                 httpOnly: true,
                 secure: true,
                 sameSite:"none",
-                maxage: 30* 24 * 60 *60 * 1000
+                maxAge: 30* 24 * 60 *60 * 1000
              })
 
          res.status(201).json({
@@ -69,6 +69,7 @@ const logout = async(req,res)=>{
     httpOnly: true,
     secure: true,       // must match how it was set
     sameSite: "none",
+    path:"/"
   });
     res.json({ message:"Logged out"})
 }
