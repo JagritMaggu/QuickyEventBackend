@@ -1,6 +1,6 @@
 const {generateToken,verifyToken} = require("../Utils/util.js")
 const {User} = require("../Models/User.js")
-const jwt = require("jsonwebtoken")
+const jwt2 = require("jsonwebtoken")
 
 const signup = async (req, res)=>{
     try{
