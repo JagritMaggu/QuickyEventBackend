@@ -19,7 +19,7 @@ const signup = async (req, res)=>{
                 httpOnly: true,
                  secure: true,
                 sameSite:"none",
-             
+                 expires: new Date(Date.now()+30*24*60*60*1000)
              });
 
         res.status(201).json({ message:"Registered Successfully",
@@ -50,8 +50,8 @@ const login = async (req, res)=>{
            res.cookie("jwt", token ,{
                 httpOnly: true,
                 secure: true,
-                SameSite:"none",
-               
+                sameSite:"none",
+                expires: new Date(Date.now()+30*24*60*60*1000)
              })
 
          res.status(201).json({
