@@ -67,7 +67,7 @@ const port = process.env.PORT
 const mongoose = require("mongoose")
 const eventRoutes =require("./Routes/EventRoute.js")
 const userRoutes =require("./Routes/UserRoute.js")
-
+app.set('trust proxy', 1)
 server.listen(port,()=>console.log(`server is running at port:${port}`))
 const allowedOrigins = [
   "http://localhost:5173",
