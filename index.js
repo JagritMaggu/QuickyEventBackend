@@ -71,7 +71,8 @@ app.set('trust proxy', 1)
 server.listen(port,()=>console.log(`server is running at port:${port}`))
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://quicky-event-frontend-n739.vercel.app"
+  "https://quicky-event-frontend-n739.vercel.app",
+  "https://quicky-event-frontend-n739.vercel.app/"
 ];
 app.use(cors({
     origin: allowedOrigins,
