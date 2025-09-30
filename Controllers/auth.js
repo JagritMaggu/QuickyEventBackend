@@ -69,7 +69,7 @@ const logout = async(req,res)=>{
     httpOnly: true,
     secure: true,       // must match how it was set
     sameSite: "none",
-    path:"/"
+   
   });
     res.json({ message:"Logged out"})
 }
